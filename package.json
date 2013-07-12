@@ -1,0 +1,21 @@
+{
+  "name": "inputs.io",
+  "version": "0.0.1",
+  "description": "A wrapper for the inputs.io api",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jacobtorba/inputs.io-node.git"
+  },
+  "dependencies": {
+    "request": "2.22.0",
+    "util": "latest"
+  },
+  "keywords": [
+    "inputs.io",
+    "bitcoin",
+    "wrapper"
+  ],
+  "author": "Jacob Torba",
+  "license": "BSD"
+}
