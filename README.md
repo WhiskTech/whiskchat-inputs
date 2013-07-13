@@ -25,8 +25,10 @@ inputsio.balance(function(err,balance) {
 	console.log(balance[0]/100000000)
 });
 ```
+Get transactions
+=====
 Get last transactions, first argument specifies how many TX to skip, 0 for most recent
-Returns json of transactions. <b>Amounts in satoshis.</b>b>
+Returns json of transactions. <b>Amounts in satoshis.</b>
 
 ```
 inputsio.transactions.list(0,function(err,transactions) {
@@ -37,6 +39,8 @@ inputsio.transactions.list(0,function(err,transactions) {
 });
 ```
 
+get transaction details
+=====
 Get details for transaction id
 
 ```
@@ -47,7 +51,8 @@ inputsio.transactions.details('io2067ba89ded458ea0f07e5341f344d8b7fa2ff4b72c5903
 	console.log(transaction)
 });
 ```
-
+Send transaction
+=====
 Send transaction, specify amount in btc
 See inputs.io api page for a detailed list of ouputs to expect
 
@@ -59,6 +64,8 @@ inputsio.transactions.send('email or bitcoin address', 0.025, 'This is a note fo
 	console.log(transaction)
 });
 ```
+Generate voucher
+=====
 
 Generate a voucher, specify amount in btc
 
@@ -71,6 +78,8 @@ inputsio.voucher.generate(0.01,function(err,vouchercode) {
 });
 
 Redeem a voucher
+=====
+Redeem a voucher
 
 ```
 inputsio.voucher.redeem('your voucher code',function(err,result) {
@@ -79,7 +88,8 @@ inputsio.voucher.redeem('your voucher code',function(err,result) {
 	}
 	console.log(result)
 });
-
+Sign a message
+=====
 Sign a bitcoin message
 
 ```
@@ -90,6 +100,8 @@ inputsio.message.sign('bitcoin address', 'the message to be signed',function(err
 	console.log(result)
 });
 
+Verify a message
+=====
 Verify a signed message
 Note: you will receive some javascript errors for improper multiline string, make sure you seperate lines using \n and make string take up a single line or see how to create a proper multiline string. The result is empty if message is not verified.
 
