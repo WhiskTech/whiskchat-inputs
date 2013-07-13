@@ -39,7 +39,7 @@ inputsio.transactions.list(0,function(err,transactions) {
 });
 ```
 
-get transaction details
+Get transaction details
 =====
 Get details for transaction id
 
@@ -76,10 +76,10 @@ inputsio.voucher.generate(0.01,function(err,vouchercode) {
 	}
 	console.log(vouchercode)
 });
+```
 
 Redeem a voucher
 =====
-Redeem a voucher
 
 ```
 inputsio.voucher.redeem('your voucher code',function(err,result) {
