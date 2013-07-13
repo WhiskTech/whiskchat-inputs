@@ -2,14 +2,13 @@
   "name": "inputs.io",
   "version": "0.0.1",
   "description": "A wrapper for the inputs.io api",
-  "main": "lib/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:jacobtorba/inputs.io-node.git"
   },
   "dependencies": {
-    "request": "2.22.0",
-    "util": "latest"
+    "request": "2.22.0"
   },
   "keywords": [
     "inputs.io",
