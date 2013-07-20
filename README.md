@@ -2,6 +2,7 @@ inputs.io-node
 =====
 Inputs.io-node is a wrapper around the inputs.io api, this module provides an easy way to get information from inputs.io. See the inputs.io api page for more detailed info on output data.
 
+<b>Note:</b> This module is in an infant state and may have bugs.
 
 Require inputs.io to get started
 
