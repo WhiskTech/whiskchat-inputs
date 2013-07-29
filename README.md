@@ -2,7 +2,7 @@ inputs.io-node
 =====
 Inputs.io-node is a wrapper around the inputs.io api, this module provides an easy way to get information from inputs.io. See the inputs.io api page for more detailed info on output data.
 
-<b>Note:</b> This module is in an infant state and may have bugs.
+<b>Note:</b> This module is in an infant state and may have bugs, use with caution!
 
 Require inputs.io to get started
 
@@ -16,7 +16,7 @@ var inputsio = new inputs({
 ```
 
 Get balance
-<b>Amount in satoshis.</b>b>
+<b>Amount in satoshis.</b>
 
 ```
 inputsio.balance(function(err,balance) {
@@ -89,6 +89,8 @@ inputsio.voucher.redeem('your voucher code',function(err,result) {
 	}
 	console.log(result)
 });
+
+```
 Sign a message
 =====
 Sign a bitcoin message
@@ -100,7 +102,7 @@ inputsio.message.sign('bitcoin address', 'the message to be signed',function(err
 	}
 	console.log(result)
 });
-
+```
 Verify a message
 =====
 Verify a signed message
@@ -113,3 +115,12 @@ inputsio.message.verify('signed message to be verified',function(err,result) {
 	}
 	console.log(result)
 });
+```
+
+Stability
+=====
+In terms of use, this library has been used in many projects, but never versions may be faulty in some way:
+<ul>
+	<li><a href="http://www.bitspoker.com">BitsPoker</a></li>
+	<li><a href="http://www.messagecoin.com">MessageCoin</a></li>
+</ul>
