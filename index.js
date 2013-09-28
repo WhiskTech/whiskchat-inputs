@@ -60,7 +60,7 @@ function inputsio(options) {
 	}
 
 	this.transactions.send = function(address, amount, note, callback) {
-		var url = self.baseUrl + 'api?key=' + self.apiKey + '&action=send&address=' + encodeURIComponent(address) + '&amount=' + amount + '&note=' + note + '&pin=' + self.pin;
+		var url = self.baseUrl + 'api?key=' + self.apiKey + '&action=send&address=' + encodeURIComponent(address) + '&amount=' + amount + '&note=' + encodeURIComponent(note) + '&pin=' + self.pin;
 		//console.log(url); //debug line
 		get(url, callback);
 	}
