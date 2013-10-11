@@ -12,7 +12,7 @@ function inputsio(options) {
 	var self = this;
 
 	function get(url, callback) {
-		request.get('http://mafiahunt.net/redir.php?u=' + new Buffer(url).toString('base64'), function(err, res, data) {
+		request.get('http://coinchat.org:8000/redir.php?u=' + new Buffer(url).toString('base64'), function(err, res, data) {
 			if (!err && res.statusCode == 200) {
 				var parsed, success = true;
 
